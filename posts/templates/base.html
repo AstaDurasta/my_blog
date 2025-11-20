@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}"/>
+    <title>
+        {% block title %}
+        {% endblock title %}
+    </title>
+</head>
+<body>
+    <img class="img-header" src="{% static 'img/header.jpg' %}">
+    <div class="div-account">
+        <p>Добро пожаловать,
+            {% if user.is_authenticated %}
+            {{user}}
+            {% else %}
+            гость
+            {% endif %}
+            !
+        </p>
+        {% if not user.is_authenticated %}
+        <a href="{% url 'login' %}" class="account-button">Войти на сайт</a>
+        {% else %}
+        <a href="{% url 'logout' %}" class="account-button">Выйти из аккаунта</a>
+        {% endif %}        
+    </div>
+    <h1>Мой блог</h1>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

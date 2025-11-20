@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+Редактирование записи
+{% endblock title %}
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+    {%csrf_token%}
+    <h3>Редактирование записи</h3>
+    {{form}}
+    {% if form.uploaded_image.value %}
+    <img src="{{form.uploaded_image.value}}" class="img-post">
+    {% endif %}
+    <input type="submit" value="Сохранить запись" class="form-button">
+</form>
+{% endblock content %}

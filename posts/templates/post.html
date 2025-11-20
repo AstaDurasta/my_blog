@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}
+Добавление записи
+{% endblock title %}
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+    {%csrf_token%}
+    <h3>Добавление записи</h3>
+        <label>Заголовок</label>
+        <input type="text" name="header_form">
+        <label>Категория</label>
+        <select  name="category_form">
+            {% for category in categories %}
+            <option value="{{category.id}}">{{category.name}}</option>
+            {% endfor %}
+        </select>
+        <label>Текст</label>
+        <textarea cols="30" rows="10" name="text_form"></textarea>
+        <input type="file" accept="image/*" name="file_form">
+        <input type="submit" value="Сохранить запись" class="form-button">
+</form>
+{% endblock content %}

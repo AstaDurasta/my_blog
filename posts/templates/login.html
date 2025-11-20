@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}
+Вход в учетную запись
+{% endblock title %}
+{% block content %}
+<form method="POST">
+    {%csrf_token%}
+    <h3>Вход в учетную запись</h3>
+    <p class="error">{{error}}</p>
+    {{form}}
+    <input type="submit" value="Войти" class="form-button">
+</form>
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+Добавление записи
+{% endblock title %}
+{% block content %}
+<form method="POST">
+    {%csrf_token%}
+    <h3>Удаление записи</h3>
+    <p>Вы хотите удалить запись "{{post.header}}"?</p>
+    <div>
+        <a href="{% url 'index' %}" class="delete-form-button">Отмена</a>
+        <input type="submit" value="Удалить" class="delete-form-button">
+    </div>
+</form>
+{% endblock content %}

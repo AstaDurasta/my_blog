@@ -1,0 +1,138 @@
+body{
+    background-color:darkgrey;
+    color: darkslategray;
+}
+.img-header{
+    width: 100%;
+    border-radius: 20px;
+}
+h1{
+    text-align: center;
+    font-size: 54px;
+}
+.add-post-button{
+    text-decoration: none;
+    font-size: 22px;
+    color:aliceblue;
+    background-color: darkslategray;
+    width: 25%;
+    margin: 0 auto;
+    display: block;
+    padding: 10px 0px;
+    border-radius: 10px;
+    text-align: center; 
+}
+a:hover, .form-button:hover{
+    background-color:aliceblue;
+    color: darkslategray;
+}
+.div-post
+{
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0px;
+}
+.div-content-post
+{
+    display: inline-block;
+    width: 72%;
+}
+.img-post 
+{
+    display: inline-block;
+    width: 25%;
+    border-radius: 10px;
+}
+form
+{
+    background-color:rgb(104, 124, 124);
+    width: 50%;
+    text-align: center;
+    border-radius: 20px;
+    color:aliceblue;
+    font-size: 20px; 
+    padding: 10px;  
+    margin: 10px auto;     
+}
+input, textarea, select
+{
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    width: 80%;
+    display: block;
+    margin: 5px auto;
+    padding: 5px 10px;
+    color:darkslategray;
+    font-size: 16px; 
+}
+label{
+    display: block;
+    text-align: left;
+    width: 80%;
+    margin: 5px auto;
+}
+.form-button{
+    width: 50%;
+    margin-top: 10px;
+    background-color:darkslategray;
+    color:aliceblue;
+}
+.form-filter
+{
+    width: 90%;
+    background-color:darkgrey;
+}
+.form-filter label, .form-filter select, .form-filter input{
+    display: inline;
+}
+.form-filter label{
+    margin-left: 2%;
+}
+.form-filter select, .form-filter input{
+    width: 20%;
+    margin-right: 2%;
+}
+
+.img-post-icon{
+    width: 1.5%;
+    margin-right: 30px;
+}
+.img-post-icon:hover{
+    background-color: rgb(210, 217, 222);
+}
+
+.delete-form-button{
+    display: inline-block;
+    width: 30%;
+    border-radius: 5px;
+    background-color: aliceblue;
+    color: darkslategray;
+    font-size: 16px; 
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+.delete-form-button:hover{
+    color: aliceblue;
+    background-color: darkslategray;
+}
+
+.div-account{
+    text-align: right;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.error{
+    color: rgb(138, 2, 2);
+}
+.account-button{
+    color: aliceblue;
+    background-color: darkslategray;
+    padding: 5px 10px;
+    border-radius: 5px;    
+    text-decoration: none;
+}
